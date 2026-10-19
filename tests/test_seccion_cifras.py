@@ -1,3 +1,4 @@
+
 from scripts.perfil.secciones.cifras import calcular_cifras, generar
 
 
@@ -42,7 +43,9 @@ def test_generar_texto_en_espanol():
     assert resultado.endswith("</p>")
     assert "Proyectos" in resultado
     assert "Estrellas" in resultado
+    assert "Forks" in resultado
     assert "Colaboradores" in resultado
+    assert "Aportes" in resultado
 
 
 def test_generar_texto_en_ingles():
@@ -58,7 +61,9 @@ def test_generar_texto_en_ingles():
 
     assert "Projects" in resultado
     assert "Stars" in resultado
+    assert "Forks" in resultado
     assert "Contributors" in resultado
+    assert "Contributions" in resultado
 
 
 def test_generar_cinco_insignias_con_los_numeros():
@@ -76,3 +81,4 @@ def test_generar_cinco_insignias_con_los_numeros():
 
     for numero in ("2", "15", "5", "3", "60"):
         assert numero in resultado
+
